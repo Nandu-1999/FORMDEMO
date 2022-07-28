@@ -1,6 +1,6 @@
 import { HttpClientModule } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup} from '@angular/forms';
 import { Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
@@ -15,12 +15,14 @@ export class SignupComponent implements OnInit {
   constructor(private formbuilder : FormBuilder,private http: HttpClientModule,private router : Router) { }
 
   ngOnInit(): void {
-    this.signupForm = this.formbuilder.group({
-      fullname:['',Validators.required ],
-      mobilenumber:['',Validators.required,Validators.minLength(10),Validators.maxLength(12)],
-      email:['',Validators.required,Validators.pattern('^[a-z0-9,%+]+@[a-z0-9.-]+\.[a-z]{2,4}$')],
-      password:['',Validators.required, Validators.minLength(6)]
-    })
+    this.signupForm = this.formbuilder.group(
+      {
+      fullname:['',[Validators.required]],
+      mobilenumber:['',[Validators.required,Validators.minLength(10),Validators.maxLength(12)]],
+      email:['',[Validators.required,Validators.pattern('^[a-z0-9,%+]+@[a-z0-9.-]+\.[a-z]{2,4}$')]],
+      password:['',[Validators.required,Validators.minLength(6),Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]+$')]]
+    }
+    )
   }
   signup(){
     alert("Signup Sucessful");

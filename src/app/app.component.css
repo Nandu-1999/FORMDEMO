@@ -1,7 +1,6 @@
 .content-body {
-    max-height: 70%;
-    padding: 190px 5rem;
-    background: rgb(201, 50, 93);
-    display: block;
+    max-height: 100%;
+    padding: 500px 1rem;
+    background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
     
 }

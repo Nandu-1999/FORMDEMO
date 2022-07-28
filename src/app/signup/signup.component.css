@@ -5,9 +5,8 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgb(8, 183, 101);
-    background: linear-gradient(90deg, rgb(171, 220, 22)100%);
+    transform: translate(-55%, -45%);
+    background: linear-gradient(90deg, #FDBB2D 0%, #22C1C3 100%);
 }
 .card h1,
 h6{
